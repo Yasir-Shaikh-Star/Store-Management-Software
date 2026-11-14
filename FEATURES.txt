@@ -1,0 +1,154 @@
+HARDWARE STORE CASH BOOK - FEATURES
+===================================
+
+A simple, offline cash book for a hardware shop.
+Works without internet. Nothing to install. Amounts are shown in Pakistani Rupees (Rs. 125,000).
+Stock: you can keep a simple stock list (see section 8). It is separate from the cash book.
+
+
+1. LOGIN AND SECURITY
+---------------------
+* First start: the owner (admin) creates the account - shop name, name, username, password.
+* A Recovery Key is shown once, to reset the owner password if it is forgotten.
+* Every later start asks for username and password.
+* Two kinds of users:
+    Owner - can do everything, including Settings, Backup & Restore, and adding staff.
+    Staff - can record entries and see reports, but cannot open Settings or Backup & Restore.
+* Owner can add staff, reset a staff password or remove a staff user.
+* Every user can change their own password.
+* After 5 wrong passwords, login waits 30 seconds.
+* Passwords are stored scrambled (salted SHA-256), never as plain text.
+
+
+2. DASHBOARD
+------------
+* Today's income, today's expenses, customer credit, supplier payable and cash balance.
+  
+* Quick buttons to add income, expense, customer, payment, loan or product.
+* List of the most recent transactions.
+* Reminder if automatic backup is off or needs permission.
+
+
+3. INCOME / SALES
+-----------------
+* Record each sale with date, amount, description and payment method.
+* Payment methods: Cash or Credit (on account).
+* Credit sales are linked to a customer and added to what he owes.
+* Search, filter by date, edit and delete entries.
+
+
+4. CUSTOMERS
+------------
+* Customer list with name, phone and address.
+* Credit given and payments received for each customer.
+* Running balance: how much each customer still owes.
+* Full statement for each customer, with print.
+* A customer with saved records cannot be deleted by mistake.
+
+
+5. SUPPLIERS
+------------
+* Supplier list with name, phone and address.
+* Record supplier bills (amount you owe) and payments made.
+* Running balance: how much you still owe each supplier.
+* Full statement for each supplier, with print.
+
+
+6. EXPENSES
+-----------
+* Record shop expenses by category: Rent, Electricity, Salary, Transport, Food, Repairs, Shop Maintenance, Miscellaneous.
+* Search, filter by category and date, edit and delete.
+
+
+7. LOANS
+--------
+* Loans you took (borrowed) and loans you gave.
+* Repayments recorded against each loan.
+* Shows the paid amount and the remaining balance.
+
+
+8. STOCK (products, sold, remaining)
+------------------------------------
+* Add each product with its name, unit (pcs, kg, bag, box, feet, meter, litre ...),
+  the stock you have in the store now, "Order When Stock Falls To" (alert level) and the
+  "Usual Order Quantity" (both optional).
+* "+ Add Stock" when new goods arrive. "Sold" when goods are sold.
+* The software shows, for every product: Opening, Stock In, Sold and Remaining.
+  Remaining = Opening + Stock In - Sold.
+* Status for each product: In Stock, Low Stock or Out of Stock.
+* ITEMS TO ORDER list: shows every product that is finished or has fallen to its order
+  level, with the usual quantity to order. Print Order List (or Order List PDF) to take it
+  to the supplier. A product leaves the list when you add stock.
+* It does not let you sell more than what is in the store.
+* Stock History lists every entry. Filter by product, type or date. Edit or delete entries.
+* Search products by name.
+* Dashboard shows a Stock alert when a product is low or finished.
+* Print Stock Report / Order List, or download them as PDF, with the shop header and signature.
+* Stock is separate from the cash book: recording stock does not change any money.
+  Record the money for a sale in Income / Sales as usual.
+* Stock is saved and backed up with all other records.
+
+
+9. CASH BOOK
+------------
+* Automatic cash balance: opening cash + money in - money out.
+* Day-by-day list of every cash movement with running balance.
+* Choose any period: today, yesterday, this week, this month or custom dates.
+* Print or download as PDF.
+
+
+10. REPORTS
+----------
+* Choose a period: today, yesterday, this week, this month or custom dates.
+* Totals for income, expenses, credit given, payments received, supplier payments and loans.
+* "Net Recorded Income" = Income minus recorded Expenses
+  (it is not true profit, because the cost of goods is not recorded).
+* Print Report - prints a professional A4 report.
+* Download Report (PDF) - saves the same report as a PDF file to keep or send.
+* Printed report includes:
+    - Shop name, address and phone number at the top of every page
+    - Page number ("Page 1 of 3") at the bottom of every page
+    - Signature section at the bottom of the last page
+* The owner can edit the shop address and phone number (Reports page or Settings).
+
+
+11. AUTOMATIC SAVING AND BACKUP
+-------------------------------
+* Every change is saved at once inside the browser - no Save button is needed.
+* A second hidden copy is kept inside the browser and is used automatically
+  if the main copy is ever lost.
+* Automatic Backup to a folder (Chrome / Edge): the owner chooses a folder once, and the
+  software then writes a backup file there about one second after every change.
+  A dated copy is kept for each of the last 14 days.
+* A small indicator in the menu shows whether automatic backup is ON.
+* Manual backup: Download Backup saves everything to one file (.json).
+* Restore Backup: bring all records back from a backup file. It also works on the
+  first-start screen, for a new computer.
+
+
+12. SETTINGS (owner only)
+-------------------------
+* Shop name, address and phone number.
+* Opening cash balance.
+
+
+13. GENERAL
+-----------
+* Works completely offline. No internet, no account, no monthly fee.
+* No installation: unzip and open index.html.
+* Works in Google Chrome and Microsoft Edge (best) on Windows.
+* Layout fits a computer, tablet or phone screen.
+* Simple, clean, professional design.
+* Amounts always shown in PKR format.
+* Confirmation before deleting anything.
+* Checks all input (no empty or wrong amounts).
+
+
+14. GOOD TO KNOW
+----------------
+* Records are saved inside the browser on that computer. Always use the same browser and
+  keep the software in the same folder.
+* Do not clear browser "site data / cookies", as this can delete the records.
+  (Automatic Backup protects you from this - turn it on.)
+* Urdu letters cannot be shown in the downloaded PDF. Use Print > Save as PDF for Urdu text.
+* Page numbers on printed pages need Chrome or Edge version 131 or newer.
